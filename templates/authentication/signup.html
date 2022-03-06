@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+       <h2>SignUp</h2>
+       <form action='/signup' method='post'>
+       {% csrf_token %}
+        <label>Username</label>
+        <input type= 'text' name='username' id='username' placeholder='Enter username contains only text and numbers)'>
+        <label>First Name</label>
+        <input type= 'text' name='fname' id='fname' placeholder='Enter your first name'>
+        <label>Last Name</label>
+        <input type= 'text' name='lname' id='lname' placeholder='Enter your last name'>
+        <label>Email Address</label>
+        <input type= 'email' name='email' id='email' placeholder='Enter your email address'>
+        <label>Password</label>
+        <input type= 'password' name='pass1' id='pass1' placeholder='Enter your password'>
+        <label>Password</label>
+        <input type= 'password' name='pass2' id='pass2' placeholder='Confirm your password'>
+        
+        <input type='submit' value='Submit'>     
+        </form>
+        <script src="" async defer></script>
+    </body>
+</html>
