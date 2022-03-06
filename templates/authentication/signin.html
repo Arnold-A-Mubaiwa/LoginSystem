@@ -13,6 +13,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+     {% for message in messages %}
+            <div class="alert alert-{{ message_tags }} alert-dismissable fade show" role='alert'>
+            <strong>Message:</strong>{{message}}
+            <button type='button' class='close' data-dismiss='alert' arial-label='Close'>
+            <span aria-hidden='true'>&times</span>
+            </button>
+            </div>
+        {% endfor %}
+        
        <h2>Sign In</h2>
        <form action='/signin' method='post'>
        {% csrf_token %}
