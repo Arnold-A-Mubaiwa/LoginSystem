@@ -13,10 +13,23 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
+        {% for message in messages %}
+            <div class="alert alert-{{ message_tags }} alert-dismissable fade show" role='alert'>
+            <strong>Message:</strong>{{message}}
+            <button type='button' class='close' data-dismiss='alert' arial-label='Close'>
+            <span aria-hidden='true'>&times</span>
+            </button>
+            </div>
+        {% endfor %}
       <h2>Welcome to my page</h2>
+      {% if user.is_authenticated%}
+            <h4>Hello, {{ fname }}</h4>
+            <h4>You are welcome</h4>
+      <button><a href="{% url 'signout' %}">Sign Out </button>
+      {% else %}
+      
       <button><a href="{% url 'signin' %}">Sign In </button>
       <button><a href="{% url 'signup' %}">Sign Up </button>
-      <button><a href="{% url 'signout' %}">Sign Out </button>
-        <script src="" async defer></script>
+        {% endif %}
     </body>
 </html>
