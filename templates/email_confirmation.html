@@ -1,0 +1,9 @@
+{% autoescape off %}
+Wecome to Login sytsem
+
+Hello {{ name }}
+Please confirm your email by clicking the link below
+
+Confirmaion link : http://{{ domain}}{% url 'activate' uidb64=uid token=token%}
+
+{% endautoescape %}
