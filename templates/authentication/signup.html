@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -26,6 +27,7 @@
        <h2>SignUp</h2>
        <form action='/signup' method='post'>
        {% csrf_token %}
+       {% comment %} {% crispy form %} {% endcomment %}
         <label>Username</label>
         <input type= 'text' name='username' id='username' placeholder='Enter username contains only text and numbers)'>
         <br><label>First Name</label>
